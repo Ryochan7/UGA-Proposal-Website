@@ -1,0 +1,327 @@
+/* Base tags */
+body {
+    background-color: #59595F;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+a {
+    color: #A6E717;
+}
+
+a:visited {
+    color: #43E137;
+}
+
+/* Header layout */
+#header {
+    margin: 0px auto;
+    width: 940px;
+    text-align: center;
+}
+
+#header img {
+    border: none;
+}
+
+/* Main page layout */
+#page {
+    width: 940px;
+    margin: 10px auto 10px auto;
+    color: #3E3B36;
+    background-color: #565F68;
+}
+
+/* Page link header */
+#page_link_header {
+    background-color: #565F68;
+    width: 940px;
+    margin: 10px auto 0px auto;
+    line-height: auto;
+    height: 50px;
+}
+
+#page_link_header ul {
+    list-style: none;
+    display: inline;
+}
+
+#page_link_header li {
+    float: left;
+    padding: 17px 10px 10px 20px;
+}
+
+#page_link_header li a {
+    text-decoration: none;
+}
+
+/* Sidebar */
+#sidebar {
+    float: left;
+    width: 200px;
+    margin: 5px 10px 0px 0px;
+}
+
+#sidebar #user_display {
+    margin-left: 20px;
+    font-size: 1.05em;
+}
+
+#sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px 20px 20px 20px;
+}
+
+#sidebar li h3 {
+    border-bottom: none;
+    margin: 0px 0px 10px 0px; 
+}
+
+#sidebar li ul {
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+}
+
+#sidebar li ul li {
+    line-height: 2.5em;
+    border-bottom: 1px dashed #D2D4C9;
+}
+
+#sidebar li h3 {
+    border-bottom: none;   
+}
+
+#sidebar ul .logo {
+    margin-left: -20px;
+    margin-bottom: 5px;
+    padding: 0px;
+    border: none;
+}
+
+#sidebar ul img {
+    border: none;
+}
+
+/* Main content pane */
+#content_pane {
+    float: left;
+    width: 690px;
+    background-color: #B8AFA6;
+    padding: 0px 20px 20px 20px;
+}
+
+#content_pane a {
+    color: #04930b;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    background-color: #000000;
+    padding: 5px 0px 5px 0px;
+    color: #FFFFFF;
+    font-size: 0.9em;
+}
+
+/* Miscellaneous */
+.error_msg {
+    padding: 2px 20px;
+    /*margin-left: -20px;*/
+    margin: 10px 20px 10px 0px;
+    background-color: #EDFB0A;
+    color: #F33232;
+    font-family: Arial,sans-serif;
+    border: 2px solid #F33232;
+}
+
+#breadcrumb_trail {
+    text-align: left;
+    margin: 0px 0px 5px;
+    font-size: 0.75em;  
+    text-decoration: none;
+}
+
+#breadcrumb_trail a {
+    text-decoration: none;
+}
+
+.session_message {
+    background-color: #19F978;
+    color: #000000;
+    display: inline-block;
+    padding: 10px;
+}
+
+.session_error {
+    background-color: #EDFB0A;
+    color: #F33232;
+    font-family: Arial,sans-serif;
+    display: inline-block;
+    padding: 10px;
+}
+
+.list {
+    text-align: left;
+    width: 100%
+}
+
+.list thead {
+    background-color: #FFFFFF;
+}
+
+.list .row1 {
+    background: #EDF3FE none repeat scroll 0 0;
+}
+
+dl dt {
+    clear: both;
+    float: left;
+    text-align: right;
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+dl dd {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 2px;
+}
+
+#content_pane .title a {
+    color: #3E3B36;
+    text-decoration: none;
+}
+
+#content_pane .title a:hover {
+    color: #3E3B36;
+    text-decoration: underline;
+}
+
+.credit {
+    font-size: 0.75em;
+    margin: 0px;
+    border-bottom: 1px dashed #000000;
+    padding-bottom: 10px;
+}
+
+/* Calendar */
+.calendar {
+    margin: 0px auto;
+}
+
+.calendar .monthName th {
+    background-color: #c7cde0;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.calendar .dayName th {
+    padding: 4px 8px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.calendar .otherMonth {
+    background-color: #B8AFA6;
+    color: #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px dotted #000000;
+    height: 60px;
+}
+
+.calendar .day {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px dotted #000000;
+    height: 60px;
+}
+
+.calendar td {
+    vertical-align: top;
+}
+
+.calendar ul {
+    clear: both;
+    list-style: none outside none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.calendar ul li {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 4px;
+    padding: 2px 0px;
+}
+
+.calendar ul .last {
+    border-bottom: 0px none;
+    padding: 2px 0px 0px 0px;
+}
+
+.calendar .daynum {
+    padding: 3px;
+    float: left;
+    border-bottom: 1px dashed #000000;
+    border-right: 1px dashed #000000;
+}
+
+/* Form elements */
+form ul {
+    list-style-type: none;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+form li {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+form label {
+    float: left;
+    text-align: right;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-right: 20px;
+    width: 9em;
+}
+
+form label.optional {
+    font-size: 0.9em;
+    font-weight: normal;
+    padding-left: 1em;
+}
+
+form .error {
+    color: #FF0000;
+}
+
+form label .sub_text {
+    margin: 5px 0px;
+    display: block;
+    font-size: 0.75em;
+    font-weight: normal;
+    line-height: 1.0em;
+}
+
+form p.help_text {
+    font-size: 0.75em;
+    font-weight: normal;
+    line-height: 1.0em;
+    margin-left: 9em;
+    padding-left: 58px;
+}
+
+
+form ul .submit {
+    margin-left: 164px;
+    margin-top: 20px;
+}
+

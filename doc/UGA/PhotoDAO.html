@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class PhotoDAO</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class PhotoDAO</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Photo data access singleton class</p>
+<p class="description"><p>Data access class that will be used to read and write Photo entities from or to the database</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_models---Photo.php.html">/models/Photo.php</a> (line <span class="field">283</span>)
+		</p>
+		
+				
+		<pre><a href="../UGA/DAOBase.html">DAOBase</a>
+   |
+   --PhotoDAO</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																				<div class="var-title">
+					static <span class="var-type"><a href="../UGA/PhotoDAO.html">PhotoDAO</a></span>
+					<a href="#$instance" title="details" class="var-name">$instance</a>
+				</div>
+																												<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$columns" title="details" class="var-name">$columns</a>
+				</div>
+																								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$tableName" title="details" class="var-name">$tableName</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																												<div class="method-definition">
+					static 						<span class="method-result"><a href="../UGA/PhotoDAO.html">PhotoDAO</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																																																								
+												<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#all" title="details" class="method-name">all</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#allByAlbum" title="details" class="method-name">allByAlbum</a>
+											(<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#allByIds" title="details" class="method-name">allByIds</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#count" title="details" class="method-name">count</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#countByAlbum" title="details" class="method-name">countByAlbum</a>
+											(<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#countPosition" title="details" class="method-name">countPosition</a>
+											(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#deleteByIds" title="details" class="method-name">deleteByIds</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#insert" title="details" class="method-name">insert</a>
+											(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../UGA/Model/Photo.html">Photo</a></span>
+										<a href="#load" title="details" class="method-name">load</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../UGA/Model/Photo.html">Photo</a></span>
+										<a href="#loadNext" title="details" class="method-name">loadNext</a>
+											(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../UGA/Model/Photo.html">Photo</a></span>
+										<a href="#loadPrevious" title="details" class="method-name">loadPrevious</a>
+											(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseOptions" title="details" class="method-name">parseOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instance" id="$instance"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type"><a href="../UGA/PhotoDAO.html">PhotoDAO</a></span>
+			<span class="var-name">$instance</span>
+						(line <span class="line-number">290</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instance of PhotoDAO class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$columns" id="$columns"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$columns</span>
+			 = <span class="var-default">array (&quot;id&quot;, &quot;albumId&quot;, &quot;title&quot;, &quot;description&quot;, &quot;fileLoc&quot;, &quot;thumbLoc&quot;)</span>			(line <span class="line-number">302</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of strings containing column names for an Photo row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#var$columns">DAOBase::$columns</a></dt>
+						<dd>Array of strings representing table columns</dd>
+					</dl>
+		
+		
+
+</div>
+<a name="var$tableName" id="$tableName"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$tableName</span>
+			 = <span class="var-default"> &quot;photos&quot;</span>			(line <span class="line-number">296</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of database table holding Photo data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#var$tableName">DAOBase::$tableName</a></dt>
+						<dd>Table name</dd>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../UGA/DAOBase.html">DAOBase</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$dbh">DAOBase::$dbh</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$joins">DAOBase::$joins</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$limit">DAOBase::$limit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_joins">DAOBase::$query_joins</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_limit">DAOBase::$query_limit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_order">DAOBase::$query_order</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_params">DAOBase::$query_params</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_reset_lock">DAOBase::$query_reset_lock</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_select">DAOBase::$query_select</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_where">DAOBase::$query_where</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$select_columns">DAOBase::$select_columns</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method getInstance</span> (line <span class="line-number">312</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve instance of an PhotoDAO or create one if it does  not exist.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result"><a href="../UGA/PhotoDAO.html">PhotoDAO</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#methodgetInstance">DAOBase::getInstance()</a></dt>
+						<dd>Abstract placeholder for Singleton pattern</dd>
+					</dl>
+			
+	</div>
+
+<a name="methodall" id="all"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">all</span> (line <span class="line-number">409</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load all instances of Photo entities. Use options array to limit results read.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			all
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallByAlbum" id="allByAlbum"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">allByAlbum</span> (line <span class="line-number">598</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load instances of Photo entities that have an albumId associated with an Album</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			allByAlbum
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>
+				<span class="var-name">$album</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallByIds" id="allByIds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">allByIds</span> (line <span class="line-number">543</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load instances of Photo entities with the ids specified in the $ids array</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			allByIds
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ids</span><span class="var-description">: Array containing int ids of Photo entities to load</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount" id="count"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">count</span> (line <span class="line-number">457</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return count number of Photo entities in the database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			count
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcountByAlbum" id="countByAlbum"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">countByAlbum</span> (line <span class="line-number">618</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return count number of Photo entities in the database that have an albumId associated with an Album</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			countByAlbum
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>
+				<span class="var-name">$album</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcountPosition" id="countPosition"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">countPosition</span> (line <span class="line-number">639</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the count position of a Photo relative to the position in an Album</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			countPosition
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>, <span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>
+				<span class="var-name">$photo</span><span class="var-description">: Current photo</span>			</li>
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Album.html">Album</a></span>
+				<span class="var-name">$album</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete</span> (line <span class="line-number">370</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete an instance of an Photo entity from the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>
+				<span class="var-name">$photo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteByIds" id="deleteByIds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteByIds</span> (line <span class="line-number">572</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete instances of an Photo entities with the ids specified in the ids array</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			deleteByIds
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ids</span><span class="var-description">: Array containing int ids of Photo entities to delete</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert" id="insert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert</span> (line <span class="line-number">386</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Insert an instance of an Photo entity into the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			insert
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>
+				<span class="var-name">$photo</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">load</span> (line <span class="line-number">328</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an instance of an Photo entity from the database that has the id specified</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../UGA/Model/Photo.html">Photo</a></span>
+		<span class="method-name">
+			load
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadNext" id="loadNext"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadNext</span> (line <span class="line-number">670</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an instance of an Photo entity from the database that corresponds to the next Photo</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../UGA/Model/Photo.html">Photo</a></span>
+		<span class="method-name">
+			loadNext
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>
+				<span class="var-name">$photo</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadPrevious" id="loadPrevious"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadPrevious</span> (line <span class="line-number">692</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an instance of an Photo entity from the database that corresponds to the previous Photo</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../UGA/Model/Photo.html">Photo</a></span>
+		<span class="method-name">
+			loadPrevious
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>
+				<span class="var-name">$photo</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseOptions" id="parseOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseOptions</span> (line <span class="line-number">719</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse the options array for limit clauses and order by clauses. The valid keys and value types are specified below.</p>
+<p class="description"><p>limit - Page object. Will take values from a Paginator Page object and  set LIMIT and OFFSET portions of database query accordingly</p><p>joins - bool. If true, an INNER JOIN will be done to retrieve the  Album associated with the page</p><p>order - string. Concatenate string with ORDER BY operator.  Will add table name to field if only associated with current table.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number">350</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save an instance of an Photo entity to the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			save
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>&nbsp;<span class="var-name">$photo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/Photo.html">Photo</a></span>
+				<span class="var-name">$photo</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../UGA/DAOBase.html">DAOBase</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../UGA/DAOBase.html#method__construct">DAOBase::__construct()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildColumnArray">DAOBase::buildColumnArray()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildColumnString">DAOBase::buildColumnString()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildInsertString">DAOBase::buildInsertString()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildUpdateString">DAOBase::buildUpdateString()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodclose">DAOBase::close()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodconnect">DAOBase::connect()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetColumns">DAOBase::getColumns()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetConnection">DAOBase::getConnection()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetInstance">DAOBase::getInstance()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetLimitClause">DAOBase::getLimitClause()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetTableName">DAOBase::getTableName()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodpopulateObject">DAOBase::populateObject()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodresetQueryStrings">DAOBase::resetQueryStrings()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodstripPrefixArray">DAOBase::stripPrefixArray()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 27 Nov 2010 01:18:24 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

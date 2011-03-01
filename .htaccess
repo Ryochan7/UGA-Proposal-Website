@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule .*\.svn/.* - [F]
+RewriteRule .*\.templates/.* - [F]

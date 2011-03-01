@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class UserDAO</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class UserDAO</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">User data access singleton class</p>
+<p class="description"><p>Data access class that will be used to read and write User entities from or to the database</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_models---User.php.html">/models/User.php</a> (line <span class="field">417</span>)
+		</p>
+		
+				
+		<pre><a href="../UGA/DAOBase.html">DAOBase</a>
+   |
+   --UserDAO</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																				<div class="var-title">
+					static <span class="var-type"><a href="../UGA/UserDAO.html">UserDAO</a></span>
+					<a href="#$instance" title="details" class="var-name">$instance</a>
+				</div>
+																												<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$columns" title="details" class="var-name">$columns</a>
+				</div>
+																								<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$tableName" title="details" class="var-name">$tableName</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																				<div class="method-definition">
+					static 						<span class="method-result"><a href="../UGA/UserDAO.html">UserDAO</a></span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																																																																
+												<div class="method-definition">
+											<span class="method-result">UserDAO</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#all" title="details" class="method-name">all</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#allByIdentity" title="details" class="method-name">allByIdentity</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#allByIds" title="details" class="method-name">allByIds</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#allByLetter" title="details" class="method-name">allByLetter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$letter</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#allPendingUsers" title="details" class="method-name">allPendingUsers</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#count" title="details" class="method-name">count</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#countIdentity" title="details" class="method-name">countIdentity</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#countLetter" title="details" class="method-name">countLetter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$letter</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>&nbsp;<span class="var-name">$user</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#deleteByIds" title="details" class="method-name">deleteByIds</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#insert" title="details" class="method-name">insert</a>
+											(<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>&nbsp;<span class="var-name">$user</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../UGA/Model/User.html">User</a></span>
+										<a href="#load" title="details" class="method-name">load</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../UGA/Model/TaggedArticle.html">TaggedArticle</a></span>
+										<a href="#loadByUlid" title="details" class="method-name">loadByUlid</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ulid</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../UGA/Model/User.html">User</a></span>
+										<a href="#loadByUsername" title="details" class="method-name">loadByUsername</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseOptions" title="details" class="method-name">parseOptions</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											(<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>&nbsp;<span class="var-name">$user</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#saveStatusByIds" title="details" class="method-name">saveStatusByIds</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$status</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$instance" id="$instance"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type"><a href="../UGA/UserDAO.html">UserDAO</a></span>
+			<span class="var-name">$instance</span>
+						(line <span class="line-number">424</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instance of UserDAO class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$columns" id="$columns"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$columns</span>
+			 = <span class="var-default">array (&quot;id&quot;, &quot;userType&quot;,  &quot;userName&quot;, &quot;passHash&quot;, &quot;ulid&quot;, &quot;status&quot;, &quot;steamId&quot;, &quot;xboxId&quot;, &quot;psnId&quot;, &quot;wiiId&quot;)</span>			(line <span class="line-number">436</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of strings containing column names for an User row</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#var$columns">DAOBase::$columns</a></dt>
+						<dd>Array of strings representing table columns</dd>
+					</dl>
+		
+		
+
+</div>
+<a name="var$tableName" id="$tableName"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$tableName</span>
+			 = <span class="var-default"> &quot;users&quot;</span>			(line <span class="line-number">430</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of database table holding User data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#var$tableName">DAOBase::$tableName</a></dt>
+						<dd>Table name</dd>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../UGA/DAOBase.html">DAOBase</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$dbh">DAOBase::$dbh</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$joins">DAOBase::$joins</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$limit">DAOBase::$limit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_joins">DAOBase::$query_joins</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_limit">DAOBase::$query_limit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_order">DAOBase::$query_order</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_params">DAOBase::$query_params</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_reset_lock">DAOBase::$query_reset_lock</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_select">DAOBase::$query_select</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$query_where">DAOBase::$query_where</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../UGA/DAOBase.html#var$select_columns">DAOBase::$select_columns</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method getInstance</span> (line <span class="line-number">446</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve instance of an UserDAO or create one if it does  not exist.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result"><a href="../UGA/UserDAO.html">UserDAO</a></span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#methodgetInstance">DAOBase::getInstance()</a></dt>
+						<dd>Abstract placeholder for Singleton pattern</dd>
+					</dl>
+			
+	</div>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">460</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor. Calls DAOBase constructor and sets a default ORDER BY clause. Defaults to ORDER BY users.id</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">UserDAO</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../UGA/DAOBase.html#method__construct">DAOBase::__construct()</a></dt>
+						<dd>Constructor. Create object and establish database connection.</dd>
+					</dl>
+			
+	</div>
+<a name="methodall" id="all"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">all</span> (line <span class="line-number">613</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load all instances of User entities. Use options array to limit results read.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			all
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallByIdentity" id="allByIdentity"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">allByIdentity</span> (line <span class="line-number">889</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load instances of User entities with the specified identity defined</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			allByIdentity
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$identity</span><span class="var-description">: Specify steamId, xboxId, psnId, or wiiId</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallByIds" id="allByIds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">allByIds</span> (line <span class="line-number">795</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load instances of User entities with the ids specified in the array param</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			allByIds
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ids</span><span class="var-description">: Array containing int ids of User entities to load</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallByLetter" id="allByLetter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">allByLetter</span> (line <span class="line-number">930</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load instances of User entities with a user name that start with a specified letter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			allByLetter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$letter</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$letter</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodallPendingUsers" id="allPendingUsers"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">allPendingUsers</span> (line <span class="line-number">776</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load all instances of User entities that have a status of PENDING or NEEDADMIN. Use options array to limit results read.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			allPendingUsers
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount" id="count"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">count</span> (line <span class="line-number">646</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return count number of User entities in the database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			count
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcountIdentity" id="countIdentity"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">countIdentity</span> (line <span class="line-number">683</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return count number of User entities in the database filter by the identity code specified</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			countIdentity
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$identity</span><span class="var-description">: Specify steamId, xboxId, psnId, or wiiId</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcountLetter" id="countLetter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">countLetter</span> (line <span class="line-number">720</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return count number of User entities in the database by which users have a user name that start with a specified letter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			countLetter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$letter</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$letter</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete</span> (line <span class="line-number">561</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete an instance of an User entity from the database. LEFT JOIN clauses will be added to delete any associated attendance records, pages, articles and events</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>
+				<span class="var-name">$user</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteByIds" id="deleteByIds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">deleteByIds</span> (line <span class="line-number">824</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Delete instances of a User entities with the ids specified in the ids array. LEFT JOIN clauses will be added to delete any associated attendance records, pages, articles and events</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			deleteByIds
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ids</span><span class="var-description">: Array containing int ids of User entities to delete</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert" id="insert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert</span> (line <span class="line-number">590</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Insert an instance of an User entity into the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			insert
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>
+				<span class="var-name">$user</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodload" id="load"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">load</span> (line <span class="line-number">473</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an instance of an User entity from the database that has the id specified</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../UGA/Model/User.html">User</a></span>
+		<span class="method-name">
+			load
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadByUlid" id="loadByUlid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadByUlid</span> (line <span class="line-number">519</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an instance of an User entity from the database that has the ulid specified</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../UGA/Model/TaggedArticle.html">TaggedArticle</a></span>
+		<span class="method-name">
+			loadByUlid
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ulid</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ulid</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadByUsername" id="loadByUsername"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadByUsername</span> (line <span class="line-number">496</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Load an instance of an User entity from the database that has the username specified</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../UGA/Model/User.html">User</a></span>
+		<span class="method-name">
+			loadByUsername
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (Optional) Read documentation on parseOptions for details</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseOptions" id="parseOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseOptions</span> (line <span class="line-number">956</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse the options array for limit clauses and order by clauses. The valid keys and value types are specified below.</p>
+<p class="description"><p>limit - Page object. Will take values from a Paginator Page object and  set LIMIT and OFFSET portions of database query accordingly</p><p>order - string. Concatenate string with ORDER BY operator.  Will add table name to field if only associated with current table.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseOptions
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number">541</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save an instance of an User entity to the database</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			save
+		</span>
+					(<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>&nbsp;<span class="var-name">$user</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../UGA/Model/User.html">User</a></span>
+				<span class="var-name">$user</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveStatusByIds" id="saveStatusByIds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveStatusByIds</span> (line <span class="line-number">864</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update the instances of User with the specified status and with the ids specified</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Return status of PDOStatement execute method</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			saveStatusByIds
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$status</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$ids</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$status</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ids</span><span class="var-description">: Array containing int ids of User entities to load</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../UGA/DAOBase.html">DAOBase</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../UGA/DAOBase.html#method__construct">DAOBase::__construct()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildColumnArray">DAOBase::buildColumnArray()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildColumnString">DAOBase::buildColumnString()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildInsertString">DAOBase::buildInsertString()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodbuildUpdateString">DAOBase::buildUpdateString()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodclose">DAOBase::close()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodconnect">DAOBase::connect()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetColumns">DAOBase::getColumns()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetConnection">DAOBase::getConnection()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetInstance">DAOBase::getInstance()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetLimitClause">DAOBase::getLimitClause()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodgetTableName">DAOBase::getTableName()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodpopulateObject">DAOBase::populateObject()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodresetQueryStrings">DAOBase::resetQueryStrings()</a></span><br>
+													<span class="method-name"><a href="../UGA/DAOBase.html#methodstripPrefixArray">DAOBase::stripPrefixArray()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 27 Nov 2010 01:18:25 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

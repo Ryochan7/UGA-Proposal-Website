@@ -1,0 +1,12 @@
+The main documentation for the project is located in the extradocs directory.
+The documentation includes a user and developer documentation writeup
+(in odt and pdf), a uga_model.mwb file from MySQL Workbench,
+two ERD diagram pictures, and a schema file (uga_schema.sql) that can be 
+used to produce the necessary database tables required to run
+this application.
+
+This project also contains PHPDoc documentation for all the
+classes, functions and global constants defined in this application.
+The PHPDoc documentation can be found in the doc folder and
+can be viewed any web browser. Start by opening the doc/index.html file.
+
